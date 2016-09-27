@@ -1,0 +1,20 @@
+FormationBundle\Entity\Intervenant:
+    type: entity
+    table: null
+    repositoryClass: FormationBundle\Repository\IntervenantRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            nullable: true
+        prenom:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }

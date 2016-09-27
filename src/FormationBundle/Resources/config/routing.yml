@@ -1,0 +1,28 @@
+formation_eleve:
+    resource: "@FormationBundle/Resources/config/routing/eleve.yml"
+    prefix:   /eleve
+
+formation_intervenant:
+    resource: "@FormationBundle/Resources/config/routing/intervenant.yml"
+    prefix:   /intervenant
+
+formation_langage:
+    resource: "@FormationBundle/Resources/config/routing/langage.yml"
+    prefix:   /langage
+
+formation_semaine:
+    resource: "@FormationBundle/Resources/config/routing/semaine.yml"
+    prefix:   /semaine
+
+formation_module:
+    resource: "@FormationBundle/Resources/config/routing/module.yml"
+    prefix:   /module
+
+formation_promotion:
+    resource: "@FormationBundle/Resources/config/routing/promotion.yml"
+    prefix:   /promotion
+
+formation_homepage:
+    path:     /
+    defaults: { _controller: FormationBundle:Default:index }
+

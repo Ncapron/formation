@@ -1,0 +1,52 @@
+FormationBundle\Entity\Promotion:
+    type: entity
+    table: null
+    repositoryClass: FormationBundle\Repository\PromotionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+            nullable: true
+        logo:
+            type: string
+            length: 255
+            nullable: true
+        nomFormateur:
+            type: string
+            length: 255
+            nullable: true
+            column: nom_formateur
+        prenomFormateur:
+            type: string
+            length: 255
+            nullable: true
+            column: prenom_formateur
+        dateDeb:
+            type: date
+            nullable: true
+            column: date_deb
+        dateFin:
+            type: date
+            nullable: true
+            column: date_fin
+    lifecycleCallbacks: {  }
+
+    manyToOne:
+        langage:
+            targetEntity: FormationBundle\Entity\Langage
+        module:
+            targetEntity: FormationBundle\Entity\Module
+        intervenant:
+            targetEntity: FormationBundle\Entity\Intervenant
+        semaine:
+            targetEntity: FormationBundle\Entity\Semaine
+
+    manyToMany:
+        eleve:
+            targetEntity: FormationBundle\Entity\Eleve

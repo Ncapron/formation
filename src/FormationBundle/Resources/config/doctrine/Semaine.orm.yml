@@ -1,0 +1,15 @@
+FormationBundle\Entity\Semaine:
+    type: entity
+    table: null
+    repositoryClass: FormationBundle\Repository\SemaineRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: integer
+            unique: true
+    lifecycleCallbacks: {  }
